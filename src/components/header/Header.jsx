@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../../styles/Header.css'
+import logo from '../../assets/logo.png'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,8 +21,7 @@ function Header() {
         <div className="header-content">
           <div className="logo-section">
             <Link to="/" className="logo-link">
-              <span className="gradient-text logo-text">ELITE</span>
-              <span className="logo-icon">🚀</span>
+              <img src={logo} alt="ELITE AI SOLUTIONS" className="logo-img" />
             </Link>
           </div>
 

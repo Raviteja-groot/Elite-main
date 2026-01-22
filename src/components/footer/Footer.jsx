@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../styles/Footer.css'
+import logo from '../../assets/logo.png'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -11,7 +12,9 @@ function Footer() {
         <div className="footer-grid">
           {/* Brand Section */}
           <div className="footer-brand">
-            <h3 className="gradient-text text-3xl font-bold mb-4">ELITE</h3>
+            <Link to="/" className="footer-logo">
+              <img src={logo} alt="ELITE AI SOLUTIONS" className="footer-logo-img" />
+            </Link>
             <p className="text-gray-400 leading-relaxed mb-6">
               Premier career guidance and professional development institute transforming careers through excellence.
             </p>

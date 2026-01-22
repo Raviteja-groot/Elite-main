@@ -47,7 +47,7 @@ function Contact() {
                   <div key={i} className="card-premium p-8 h-full">
                     <div className="text-3xl mb-4">{item.icon}</div>
                     <p className="text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2">{item.label}</p>
-                    <p className="font-bold text-white tracking-tight">{item.val}</p>
+                    <p className="font-bold text-main tracking-tight">{item.val}</p>
                   </div>
                 ))}
               </div>
@@ -65,7 +65,7 @@ function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-blue-500/50 transition-colors"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-slate-900 focus:outline-none focus:border-blue-500/50 transition-colors"
                       placeholder="Full Name"
                       required
                     />
@@ -77,7 +77,7 @@ function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-blue-500/50 transition-colors"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-slate-900 focus:outline-none focus:border-blue-500/50 transition-colors"
                       placeholder="Email Address"
                       required
                     />
@@ -89,7 +89,7 @@ function Contact() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-blue-500/50 transition-colors"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-slate-900 focus:outline-none focus:border-blue-500/50 transition-colors"
                       placeholder="Subject of Interest"
                       required
                     />
@@ -100,7 +100,7 @@ function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-blue-500/50 transition-colors"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-slate-900 focus:outline-none focus:border-blue-500/50 transition-colors"
                       placeholder="Detailed Inquiry"
                       rows="4"
                       required

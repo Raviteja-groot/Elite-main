@@ -1,8 +1,8 @@
 .footer {
-  background: var(--bg-surface);
+  background: #0a0a0b;
   color: white;
   padding: 120px 0 60px;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-grid {
@@ -12,8 +12,9 @@
   margin-bottom: 100px;
 }
 
-.footer-brand .logo-text {
-  font-size: 32px;
+.footer-logo-img {
+  height: 85px;
+  width: auto;
   margin-bottom: 25px;
   display: block;
 }
@@ -92,7 +93,7 @@
 
 .footer-bottom {
   padding-top: 50px;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-bottom-content {

@@ -24,8 +24,8 @@ function Clients() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {logos.map((logo, i) => (
-              <div key={i} className="card-premium h-32 flex items-center justify-center grayscale hover:grayscale-0 p-4 border-dashed!">
-                <span className="text-xl font-black text-white/20 group-hover:text-white transition-all uppercase tracking-tighter">{logo}</span>
+              <div key={i} className="card-premium h-32 flex items-center justify-center grayscale hover:grayscale-0 p-4 border-dashed! group">
+                <span className="text-xl font-black text-black/20 group-hover:text-primary transition-all uppercase tracking-tighter">{logo}</span>
               </div>
             ))}
           </div>
@@ -47,8 +47,8 @@ function Clients() {
             ].map((t, i) => (
               <div key={i} className="card-premium flex flex-col justify-between border-blue-500/10!">
                 <div className="text-4xl text-blue-500/30 mb-8">“</div>
-                <p className="text-lg italic text-white/80 leading-relaxed mb-10">"{t.text}"</p>
-                <div className="pt-8 border-t border-white/5">
+                <p className="text-lg italic text-muted leading-relaxed mb-10">"{t.text}"</p>
+                <div className="pt-8 border-t border-black/5">
                   <p className="font-black tracking-tight">{t.author}</p>
                   <p className="text-[10px] font-bold text-blue-500 uppercase tracking-widest">{t.role}</p>
                 </div>

@@ -24,7 +24,7 @@ function Staffing() {
         <div className="container">
           <div className="grid md:grid-cols-4 gap-6 mb-20 animate-fade-up">
             {categories.map((c, i) => (
-              <div key={i} className="card-premium text-center hover:bg-white/5 border-dashed!">
+              <div key={i} className="card-premium text-center hover:bg-blue-50/50 border-dashed!">
                 <div className="text-4xl mb-6">{c.icon}</div>
                 <h3 className="text-lg font-bold mb-4 uppercase tracking-tight">{c.title}</h3>
                 <p className="text-muted text-xs leading-relaxed">{c.desc}</p>
@@ -53,7 +53,7 @@ function Staffing() {
             </div>
 
             <div className="card-premium">
-              <h2 className="text-2xl font-bold mb-10 text-white uppercase tracking-widest">Specialist Side</h2>
+              <h2 className="text-2xl font-bold mb-10 text-purple-600 uppercase tracking-widest">Specialist Side</h2>
               <div className="space-y-8">
                 {[
                   { t: 'Elite Opportunities', d: 'Exclusive access to high-impact global projects.' },
@@ -61,7 +61,7 @@ function Staffing() {
                   { t: 'Flexible Command', d: 'Choose your workflow: Remote, Hybrid, or On-site.' }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-6">
-                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">🚀</div>
+                    <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center shrink-0 text-purple-600">🚀</div>
                     <div>
                       <h4 className="font-bold text-lg">{item.t}</h4>
                       <p className="text-muted text-sm">{item.d}</p>

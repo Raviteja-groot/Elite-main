@@ -39,9 +39,9 @@ function Careers() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {perks.map((p, i) => (
-              <div key={i} className="card-premium p-8 text-center group hover:bg-white/5">
+              <div key={i} className="card-premium p-8 text-center group hover:bg-blue-50/50">
                 <div className="text-4xl mb-4 group-hover:scale-125 transition-transform duration-500">{p.icon}</div>
-                <p className="font-bold text-[10px] uppercase tracking-widest text-muted group-hover:text-white transition-colors">{p.title}</p>
+                <p className="font-bold text-[10px] uppercase tracking-widest text-muted group-hover:text-primary transition-colors">{p.title}</p>
               </div>
             ))}
           </div>
@@ -51,7 +51,7 @@ function Careers() {
       {/* Positions */}
       <section className="section-padding">
         <div className="container animate-fade-up">
-          <div className="flex justify-between items-end mb-16 border-b border-white/5 pb-8">
+          <div className="flex justify-between items-end mb-16 border-b border-black/5 pb-8">
             <div>
               <h2 className="section-heading">Active Roles</h2>
               <p className="text-muted">Find your place in our global network.</p>

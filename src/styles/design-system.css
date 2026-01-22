@@ -1,17 +1,23 @@
 :root {
     --primary: #3b82f6;
     --primary-hover: #2563eb;
-    --bg-deep: #0a0a0b;
-    --bg-surface: #111113;
-    --bg-card: rgba(255, 255, 255, 0.03);
-    --border-subtle: rgba(255, 255, 255, 0.08);
-    --text-main: #ffffff;
-    --text-muted: #94a3b8;
+    --bg-deep: #ffffff;
+    --bg-surface: #f8fafc;
+    --bg-card: rgba(0, 0, 0, 0.02);
+    --border-subtle: rgba(0, 0, 0, 0.06);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --dark: #0f172a;
+    --gray: #64748b;
     --glass: blur(12px);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Global Typography */
+.text-muted {
+    color: var(--text-muted);
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-deep);
@@ -27,14 +33,24 @@ h4,
     font-family: 'Outfit', sans-serif;
 }
 
-/* Elegant Grid Background */
-.bg-grid {
+/* Elegant Grid Backgrounds */
+.bg-grid-dark {
     background-size: 60px 60px, 60px 60px, 15px 15px, 15px 15px;
     background-image:
         linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
         linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.bg-grid-light,
+.bg-grid {
+    background-size: 60px 60px, 60px 60px, 15px 15px, 15px 15px;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to right, rgba(0, 0, 0, 0.01) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.01) 1px, transparent 1px);
 }
 
 /* Components */
@@ -66,13 +82,13 @@ h4,
 
 .btn-premium.outline {
     border: 1px solid var(--border-subtle);
-    background: rgba(255, 255, 255, 0.03);
-    color: white;
+    background: transparent;
+    color: var(--text-main);
 }
 
 .btn-premium.outline:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.05);
+    border-color: var(--primary);
     transform: translateY(-3px);
 }
 
@@ -120,8 +136,8 @@ h4,
 .card-premium:hover {
     border-color: rgba(59, 130, 246, 0.3);
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
 }
 
 .card-desc-premium {

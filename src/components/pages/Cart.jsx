@@ -42,7 +42,7 @@ function Cart() {
               <div className="lg:col-span-2 space-y-6">
                 {cartItems.map((item) => (
                   <div key={item.id} className="card-premium p-8 flex items-center gap-8 relative group">
-                    <div className="w-24 h-24 bg-white/5 rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-24 h-24 bg-blue-50/50 rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-500">
                       {item.emoji}
                     </div>
                     <div className="flex-1">
@@ -58,7 +58,7 @@ function Cart() {
                           Remove
                         </button>
                       </div>
-                      <div className="text-2xl font-black text-white">₹{item.price.toLocaleString('en-IN')}</div>
+                      <div className="text-2xl font-black text-blue-600">₹{item.price.toLocaleString('en-IN')}</div>
                     </div>
                   </div>
                 ))}
@@ -66,7 +66,7 @@ function Cart() {
 
               <div className="lg:col-span-1">
                 <div className="card-premium p-10 sticky top-32">
-                  <h2 className="text-2xl font-bold mb-8 uppercase tracking-widest text-center border-b border-white/5 pb-4">Summary</h2>
+                  <h2 className="text-2xl font-bold mb-8 uppercase tracking-widest text-center border-b border-black/5 pb-4">Summary</h2>
                   <div className="space-y-4 mb-8">
                     <div className="flex justify-between text-muted font-medium">
                       <span>Programs Subtotal</span>
@@ -81,10 +81,10 @@ function Cart() {
                       <span>₹{Math.round(gst).toLocaleString('en-IN')}</span>
                     </div>
                   </div>
-                  <div className="border-t border-white/10 pt-6 mb-10">
+                  <div className="border-t border-black/5 pt-6 mb-10">
                     <div className="flex justify-between items-end">
                       <span className="text-xs font-bold text-muted uppercase tracking-widest mb-1">Total Investment</span>
-                      <span className="text-3xl font-black text-white">₹{Math.round(total).toLocaleString('en-IN')}</span>
+                      <span className="text-3xl font-black text-blue-600">₹{Math.round(total).toLocaleString('en-IN')}</span>
                     </div>
                   </div>
                   <button className="btn-premium primary w-full justify-center">Transmit Payment</button>

@@ -44,12 +44,12 @@ function Consulting() {
                 <h3 className="text-3xl font-bold mb-6 uppercase tracking-tighter">{service.title}</h3>
                 <p className="text-muted text-lg leading-relaxed mb-10">{service.description}</p>
                 <div>
-                  <h4 className="text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-6 border-b border-white/5 pb-2 inline-block">Key Modules</h4>
+                  <h4 className="text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-6 border-b border-black/5 pb-2 inline-block">Key Modules</h4>
                   <div className="grid grid-cols-2 gap-4">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-3">
                         <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                        <span className="text-sm font-semibold text-white/80">{feature}</span>
+                        <span className="text-sm font-semibold text-slate-600">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -62,11 +62,11 @@ function Consulting() {
 
       <section className="section-padding">
         <div className="container">
-          <div className="card-premium bg-blue-600 border-none p-16 text-center text-white overflow-hidden relative">
+          <div className="card-premium !bg-[#3b82f6] border-none p-16 text-center text-white overflow-hidden relative shadow-2xl shadow-blue-500/30">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
-            <h2 className="text-4xl font-black mb-6">Architect Your Evolution</h2>
-            <p className="text-xl mb-12 opacity-80 max-w-2xl mx-auto">The difference between survival and dominance is strategy. Let's build yours today.</p>
-            <button className="btn-premium primary !bg-white !text-blue-600 !shadow-none hover:!bg-gray-100 transition-colors">Initiate Discovery</button>
+            <h2 className="text-4xl font-black mb-6 text-white">Architect Your Evolution</h2>
+            <p className="text-xl mb-12 text-white/90 max-w-2xl mx-auto">The difference between survival and dominance is strategy. Let's build yours today.</p>
+            <button className="btn-premium primary !bg-white !text-blue-600 !shadow-none hover:!bg-slate-100 transition-colors">Initiate Discovery</button>
           </div>
         </div>
       </section>

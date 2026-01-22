@@ -97,9 +97,9 @@ const CountUp = ({ end, duration = 2000 }) => {
 
 const Home = () => {
   return (
-    <div className="home bg-grid">
+    <div className="home bg-grid-light">
       {/* Hero Section */}
-      <section className="hero-premium section-padding">
+      <section className="hero-premium bg-grid-dark section-padding">
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content text-left flex flex-col items-start">

@@ -48,7 +48,7 @@ function Products() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {filteredProducts.map((product, index) => (
               <div key={product.id} className="card-premium group p-0 overflow-hidden flex flex-col h-full animate-fade-up">
-                <div className="h-48 bg-white/5 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-500">
+                <div className="h-48 bg-slate-50 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-500">
                   {product.emoji}
                 </div>
                 <div className="p-8 flex-1 flex flex-col">
@@ -59,7 +59,7 @@ function Products() {
                   <h3 className="text-lg font-bold mb-6 leading-tight group-hover:text-blue-500 transition-colors uppercase tracking-tight">{product.name}</h3>
                   <div className="mt-auto">
                     <div className="flex items-center justify-between mb-8">
-                      <span className="text-2xl font-black text-white">₹{product.price.toLocaleString()}</span>
+                      <span className="text-2xl font-black text-blue-600">₹{product.price.toLocaleString()}</span>
                       <div className="text-[10px] text-muted">⭐ 5.0 (120+)</div>
                     </div>
                     <button className="btn-premium primary w-full justify-center">Enroll Now</button>

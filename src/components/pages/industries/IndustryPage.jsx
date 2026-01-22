@@ -47,7 +47,7 @@ function IndustryPage() {
                 <div className="container">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="section-heading mb-12">Industry Insights</h2>
-                        <div className="prose prose-invert max-w-none text-muted text-lg leading-relaxed">
+                        <div className="max-w-none text-muted text-lg leading-relaxed">
                             <p className="mb-8">{data.details}</p>
                             <p className="mb-12">
                                 Our specialized team brings decades of combined experience in {data.title}, ensuring that our partners stay ahead of regulatory changes, market shifts, and technological disruptions.
@@ -70,7 +70,7 @@ function IndustryPage() {
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
-                                        <p className="font-semibold text-white/80">{item}</p>
+                                        <p className="font-semibold text-muted">{item}</p>
                                     </div>
                                 ))}
                             </div>

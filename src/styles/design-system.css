@@ -1,0 +1,151 @@
+:root {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --bg-deep: #0a0a0b;
+    --bg-surface: #111113;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --glass: blur(12px);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-outfit {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Elegant Grid Background */
+.bg-grid {
+    background-size: 60px 60px, 60px 60px, 15px 15px, 15px 15px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Components */
+.btn-premium {
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.btn-premium.primary {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.btn-premium.primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+}
+
+.btn-premium.outline {
+    border: 1px solid var(--border-subtle);
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+}
+
+.btn-premium.outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Section Perfection */
+.section-padding {
+    padding: 120px 0;
+}
+
+.container {
+    max-width: 1400px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    width: 100% !important;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Card Design */
+.card-premium {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    padding: 40px;
+    transition: var(--transition-smooth);
+    backdrop-filter: var(--glass);
+    text-align: center;
+    /* Center content by default */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-premium:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.card-desc-premium {
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 300px;
+    /* Keep text readable when centered */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}

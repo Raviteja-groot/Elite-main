@@ -7,7 +7,7 @@ function Layout() {
     return (
         <Router>
             <Header />
-            <div>
+            <div className="pt-24 min-h-[70vh]">
                 <Routers />
             </div>
             <Footer />

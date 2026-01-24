@@ -32,6 +32,7 @@ function Routers() {
         <Route path='/industries' element={<Industries />} />
         <Route path='/clients' element={<Clients />} />
         <Route path='/products' element={<Products />} />
+        <Route path='/courses' element={<Products />} />
         <Route path='/careers' element={<Careers />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/cart' element={<Cart />} />

@@ -99,7 +99,7 @@ const Home = () => {
   return (
     <div className="home bg-grid-light">
       {/* Hero Section */}
-      <section className="hero-premium bg-grid-dark section-padding">
+      <section className="hero-premium bg-grid-light section-padding">
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content text-left flex flex-col items-start">
@@ -113,13 +113,9 @@ const Home = () => {
               </motion.span>
 
               <h1 className="hero-main-title">
-                <LetterReveal text="Transcend" delay={0.2} className="word-block" />
-                <span className="possibility-wrapper" data-text="Possibility">
-                  <LetterReveal text="Possibility" delay={0.8} className="word-block possibility-text" />
-                </span>
-                <div className="intelligence-group">
-                  <LetterReveal text="with Intelligence." delay={1.4} className="word-block" />
-                </div>
+                <span className="transcend-wrapper brand-flow pass-through" data-text="Transcend"><LetterReveal text="Transcend" delay={0.2} className="word-block" /></span>
+                <span className="possibility-wrapper brand-flow stay-colored" data-text="Possibility"><LetterReveal text="Possibility" delay={0.8} className="word-block possibility-text" /></span>
+                <span className="intelligence-group brand-flow pass-through" data-text="with Intelligence."><LetterReveal text="with Intelligence." delay={1.4} className="word-block" /></span>
               </h1>
 
               <motion.p

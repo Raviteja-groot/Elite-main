@@ -33,6 +33,24 @@
   display: block;
 }
 
+/* Gradient Flow Animation */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-flow {
+  background-size: 200% auto;
+  animation: gradientFlow 4s linear infinite;
+}
+
 /* 
    Most styles are now handled by Tailwind utility classes in Footer.jsx
    We keep this file for complex layout tweaks if necessary.

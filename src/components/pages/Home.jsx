@@ -1,7 +1,8 @@
-import Hero3DLottie from "../Hero3DLottie";
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform, useSpring, useMotionValue, useMotionTemplate } from 'framer-motion'
+import Lottie from 'lottie-react'
+import robotAnimation from '../../assets/lottie/Robot 404.json'
 import '../../styles/Home.css'
 
 
@@ -176,7 +177,7 @@ const Home = () => {
 
               <h1 className="hero-main-title">
                 <span className="transcend-wrapper" data-text="Transform"><LetterReveal text="Transform" delay={0.2} className="word-block" /></span>
-                <span className="possibility-wrapper brand-flow stay-colored" data-text="Your Future"><LetterReveal text="Your Future" delay={0.8} className="word-block possibility-text" /></span>
+                <span className="possibility-wrapper"><LetterReveal text="Your Future" delay={0.8} className="word-block text-gradient" /></span>
                 <span className="intelligence-group" data-text="with Intelligence."><LetterReveal text="with Intelligence." delay={1.4} className="word-block" /></span>
               </h1>
 
@@ -210,37 +211,15 @@ const Home = () => {
                 </Link>
               </motion.div>
             </div>
-            <div className="hero-visual relative">
-              <div className="sphere-gradient opacity-50"></div>
-              <motion.div 
-                className="lottie-center-wrapper"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-              >
-                <Hero3DLottie />
-              </motion.div>
-              <div className="floating-elements">
-                {['EXECUTION', 'STRATEGY', 'INNOVATION', 'DESIGN', 'GROWTH', 'DATA', 'AI'].map((text, i) => (
-                  <motion.div 
-                    key={text} 
-                    className={`element e${i+1} backdrop-blur-md bg-white/40 border border-white/50 shadow-lg`}
-                    animate={{ 
-                      y: [0, -15, 0],
-                      rotate: [0, 5, -5, 0]
-                    }}
-                    transition={{ 
-                      duration: 4 + i,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: i * 0.5
-                    }}
-                    whileHover={{ scale: 1.2, zIndex: 50, backgroundColor: "rgba(255,255,255,0.9)" }}
-                  >
-                    {text}
-                  </motion.div>
-                ))}
+            <div className="hero-visual relative flex items-center justify-center">
+              <div className="w-full max-w-[600px] relative z-10">
+                <Lottie 
+                  animationData={robotAnimation} 
+                  loop={true} 
+                  className="w-full h-auto drop-shadow-2xl"
+                />
               </div>
+              <div className="sphere-gradient opacity-50 absolute inset-0 -z-10 blur-3xl scale-150"></div>
             </div>
           </div>
         </div>
@@ -275,29 +254,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Trusted By Marquee */}
-      <section className="trusted-by py-12 bg-white/50 backdrop-blur-sm border-b border-white/20 overflow-hidden">
-        <div className="container mb-8 text-center">
-          <p className="text-sm font-bold tracking-widest text-slate-500 uppercase">Trusted by Global Leaders</p>
-        </div>
-        <div className="marquee-container relative flex overflow-x-hidden">
-          <motion.div 
-            className="marquee-content flex gap-16 items-center px-4"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-          >
-            {[...Array(2)].map((_, setIndex) => (
-              <React.Fragment key={setIndex}>
-                {['Google', 'Microsoft', 'Amazon', 'Meta', 'Netflix', 'Tesla', 'IBM', 'Oracle', 'Intel', 'Adobe'].map((brand, i) => (
-                  <div key={`${setIndex}-${i}`} className="brand-item text-2xl font-bold text-slate-300 hover:text-pink-500 transition-colors cursor-default whitespace-nowrap">
-                    {brand}
-                  </div>
-                ))}
-              </React.Fragment>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      {/* Trusted By Marquee Removed */}
 
       {/* Features Section */}
       <section className="features-premium section-padding relative z-10">
@@ -363,21 +320,21 @@ const Home = () => {
             ].map((p, i) => (
               <motion.div 
                 key={i}
-                className="process-card bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative overflow-hidden group"
+                className="card-premium relative overflow-hidden group text-left items-start !p-8 !items-start !text-left"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.2 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
               >
-                <div className="absolute top-0 right-0 p-4 opacity-10 text-6xl font-black text-slate-900 group-hover:text-purple-700 transition-colors font-serif">
+                <div className="absolute top-0 right-0 p-4 opacity-10 text-6xl font-black text-white/20 group-hover:text-purple-500 transition-colors font-serif">
                   {p.step}
                 </div>
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-700 to-amber-500 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">
                   {p.step}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-slate-800 font-serif">{p.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-light">{p.desc}</p>
+                <h3 className="text-xl font-bold mb-3 text-white font-serif">{p.title}</h3>
+                <p className="text-slate-300 leading-relaxed font-light">{p.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -403,7 +360,7 @@ const Home = () => {
             <p className="cta-subtitle">Join the elite organizations transforming their industries today.</p>
             <div className="flex justify-center gap-6 mt-12">
               <Link to="/contact" className="btn-premium primary shadow-lg shadow-pink-500/30">Start Your Journey</Link>
-              <Link to="/services" className="btn-premium outline bg-white/50 hover:bg-white">View Capabilities</Link>
+              <Link to="/services" className="btn-premium outline !text-slate-300 !border-slate-300 hover:!bg-white hover:!text-slate-900 transition-all">View Capabilities</Link>
             </div>
           </div>
         </div>

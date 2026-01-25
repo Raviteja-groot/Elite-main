@@ -41,7 +41,7 @@ function Careers() {
             {perks.map((p, i) => (
               <div key={i} className="card-premium p-8 text-center group hover:bg-blue-50/50">
                 <div className="text-4xl mb-4 group-hover:scale-125 transition-transform duration-500">{p.icon}</div>
-                <p className="font-bold text-[10px] uppercase tracking-widest text-muted group-hover:text-primary transition-colors">{p.title}</p>
+                <p className="font-bold text-xs uppercase tracking-widest text-muted group-hover:text-primary transition-colors">{p.title}</p>
               </div>
             ))}
           </div>
@@ -63,11 +63,11 @@ function Careers() {
             {positions.map((pos, i) => (
               <div key={i} className="card-premium p-8 flex flex-col md:flex-row justify-between items-center group hover:border-blue-500/30">
                 <div>
-                  <span className="text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2 block">{pos.category}</span>
-                  <h3 className="text-2xl font-bold uppercase tracking-tight group-hover:text-blue-500 transition-colors">{pos.title}</h3>
+                  <span className="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2 block">{pos.category}</span>
+                  <h3 className="text-2xl font-bold uppercase tracking-tight group-hover:text-blue-500 transition-colors text-white">{pos.title}</h3>
                 </div>
                 <div className="mt-6 md:mt-0 flex items-center gap-8">
-                  <span className="text-muted font-bold text-xs uppercase tracking-widest">{pos.type}</span>
+                  <span className="text-muted font-bold text-sm uppercase tracking-widest">{pos.type}</span>
                   <button className="btn-premium primary">Apply Now</button>
                 </div>
               </div>

@@ -46,8 +46,8 @@ function Contact() {
                 ].map((item, i) => (
                   <div key={i} className="card-premium p-8 h-full">
                     <div className="text-3xl mb-4">{item.icon}</div>
-                    <p className="text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2">{item.label}</p>
-                    <p className="font-bold text-main tracking-tight">{item.val}</p>
+                    <p className="text-xs font-bold text-blue-500 uppercase tracking-widest mb-2">{item.label}</p>
+                    <p className="font-bold tracking-tight text-white">{item.val}</p>
                   </div>
                 ))}
               </div>
@@ -59,7 +59,7 @@ function Contact() {
                 <h3 className="text-2xl font-bold mb-8 uppercase tracking-widest text-center">Transmission Form</h3>
                 <div className="space-y-6">
                   <div className="input-group">
-                    <label className="text-[10px] font-bold text-muted uppercase tracking-widest mb-2 block">Identity</label>
+                    <label className="text-xs font-bold text-muted uppercase tracking-widest mb-2 block">Identity</label>
                     <input
                       type="text"
                       name="name"
@@ -71,7 +71,7 @@ function Contact() {
                     />
                   </div>
                   <div className="input-group">
-                    <label className="text-[10px] font-bold text-muted uppercase tracking-widest mb-2 block">Communication</label>
+                    <label className="text-xs font-bold text-muted uppercase tracking-widest mb-2 block">Communication</label>
                     <input
                       type="email"
                       name="email"
@@ -83,7 +83,7 @@ function Contact() {
                     />
                   </div>
                   <div className="input-group">
-                    <label className="text-[10px] font-bold text-muted uppercase tracking-widest mb-2 block">Objective</label>
+                    <label className="text-xs font-bold text-muted uppercase tracking-widest mb-2 block">Objective</label>
                     <input
                       type="text"
                       name="subject"
@@ -95,7 +95,7 @@ function Contact() {
                     />
                   </div>
                   <div className="input-group">
-                    <label className="text-[10px] font-bold text-muted uppercase tracking-widest mb-2 block">Message</label>
+                    <label className="text-xs font-bold text-muted uppercase tracking-widest mb-2 block">Message</label>
                     <textarea
                       name="message"
                       value={formData.message}

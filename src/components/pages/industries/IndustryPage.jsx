@@ -56,14 +56,9 @@ function IndustryPage() {
 
                         <div className="card-premium mt-12 overflow-hidden relative">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
-                            <h3 className="text-2xl font-bold mb-8">Strategic Focus Areas</h3>
+                            <h3 className="text-2xl font-bold mb-8 text-white">Strategic Focus Areas</h3>
                             <div className="grid sm:grid-cols-2 gap-8">
-                                {[
-                                    'Legacy System Transformation',
-                                    'Omnichannel Intelligence',
-                                    'Regulatory Compliance Engineering',
-                                    'Predictive Risk Management'
-                                ].map((item, i) => (
+                                {data.focusAreas && data.focusAreas.map((item, i) => (
                                     <div key={i} className="flex items-start gap-4">
                                         <div className="w-6 h-6 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0 mt-1">
                                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,6 +70,20 @@ function IndustryPage() {
                                 ))}
                             </div>
                         </div>
+
+                        {data.challenges && (
+                            <div className="mt-16">
+                                <h3 className="section-heading mb-8">Industry Challenges</h3>
+                                <div className="grid md:grid-cols-3 gap-6">
+                                    {data.challenges.map((challenge, idx) => (
+                                        <div key={idx} className="card-premium p-6 hover:bg-slate-800 transition-colors">
+                                            <h4 className="text-lg font-bold mb-3 text-blue-400">{challenge.title}</h4>
+                                            <p className="text-sm text-muted leading-relaxed">{challenge.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>

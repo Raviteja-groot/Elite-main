@@ -22,6 +22,7 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", path: "/" },
+    { name: "Industries", path: "/industries" },
     { name: "Courses", path: "/courses" },
     { name: "Careers", path: "/careers" },
     { name: "Contact", path: "/contact" },
@@ -34,16 +35,7 @@ export default function Header() {
     { name: "IT Solutions", path: "/services/it-solutions", icon: "💻", desc: "Tech innovation" },
   ]
 
-  const industriesDropdown = [
-    { name: "Banking", path: "/industries/banking", icon: "🏦" },
-    { name: "Healthcare", path: "/industries/healthcare", icon: "🏥" },
-    { name: "Media", path: "/industries/media", icon: "📺" },
-    { name: "Telecom", path: "/industries/telecom", icon: "📡" },
-    { name: "Energy", path: "/industries/energy", icon: "⚡" },
-    { name: "Oil & Gas", path: "/industries/oil-gas", icon: "🛢️" },
-    { name: "Retail", path: "/industries/retail", icon: "🛍️" },
-    { name: "Manufacturing", path: "/industries/manufacturing", icon: "🏭" },
-  ]
+
 
   return (
     <>
@@ -163,60 +155,7 @@ export default function Header() {
                 </AnimatePresence>
               </div>
 
-              {/* Industries Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => setActiveDropdown('industries')}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <button className="px-3 py-2 text-[15px] font-semibold text-slate-700 hover:text-[#E91E63] transition-colors duration-300 rounded-lg flex items-center gap-2 group">
-                  Industries
-                  <motion.svg
-                    animate={{ rotate: activeDropdown === 'industries' ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </motion.svg>
-                </button>
-
-                <AnimatePresence>
-                  {activeDropdown === 'industries' && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="absolute top-full left-0 mt-3 w-96 bg-white backdrop-blur-xl rounded-3xl shadow-2xl shadow-slate-900/20 border border-slate-100 overflow-hidden"
-                    >
-                      <div className="p-6">
-                        <div className="mb-4 pb-4 border-b border-slate-100">
-                          <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest">Industries We Serve</h3>
-                        </div>
-                        <div className="grid grid-cols-2 gap-2">
-                          {industriesDropdown.map((industry, idx) => (
-                            <Link
-                              key={industry.name}
-                              to={industry.path}
-                              className="flex items-center gap-3 px-4 py-3.5 rounded-xl hover:bg-gradient-to-r hover:from-[#E91E63]/10 hover:to-[#6A1B9A]/10 transition-all duration-300 group"
-                            >
-                              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                                {industry.icon}
-                              </div>
-                              <span className="text-sm font-bold text-slate-700 group-hover:text-[#E91E63] transition-colors">
-                                {industry.name}
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+              {/* Industries Dropdown Removed */}
             </nav>
 
             {/* Mobile Menu Button */}
@@ -313,22 +252,7 @@ export default function Header() {
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-200">
-                  <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Industries</h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {industriesDropdown.map((industry, idx) => (
-                      <Link
-                        key={industry.name}
-                        to={industry.path}
-                        onClick={() => setOpen(false)}
-                        className="flex items-center gap-2 text-slate-700 hover:text-[#E91E63] transition-colors"
-                      >
-                        <span className="text-lg">{industry.icon}</span>
-                        <span className="text-sm font-semibold">{industry.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                {/* Industries Mobile Menu Removed */}
 
 
               </div>

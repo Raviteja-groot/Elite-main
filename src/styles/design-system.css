@@ -139,31 +139,44 @@ h4,
 
 /* Card Design */
 .card-premium {
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
+    background: #1A1A2E;
+    background-image: linear-gradient(135deg, rgba(74, 20, 140, 0.2) 0%, rgba(233, 30, 99, 0.1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     padding: 40px;
     transition: var(--transition-smooth);
-    backdrop-filter: var(--glass);
+    backdrop-filter: blur(16px);
     text-align: center;
-    /* Center content by default */
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+}
+
+.card-premium .text-muted {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card-premium h1,
+.card-premium h2,
+.card-premium h3,
+.card-premium h4,
+.card-premium h5,
+.card-premium h6 {
+    color: white;
 }
 
 .card-premium:hover {
-    border-color: rgba(255, 47, 146, 0.3);
+    border-color: rgba(255, 47, 146, 0.5);
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    background: #1A1A2E;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 .card-desc-premium {
-    color: var(--text-muted);
+    color: #cbd5e1;
     line-height: 1.6;
     max-width: 300px;
-    /* Keep text readable when centered */
     margin-left: auto;
     margin-right: auto;
 }

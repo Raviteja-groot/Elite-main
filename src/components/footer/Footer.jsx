@@ -24,7 +24,10 @@ function Footer() {
   }
 
   return (
-    <footer className="footer relative overflow-hidden bg-white border-t border-slate-100">
+    <footer className="footer relative overflow-hidden bg-white">
+      {/* Top Multi-colored Line with Flowing Animation */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-700 via-pink-500 to-amber-500 animate-gradient-flow" />
+      
       <motion.div 
         className="container relative z-10"
         variants={containerVariants}

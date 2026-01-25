@@ -119,12 +119,12 @@
   padding: 12px 28px !important;
   border-radius: 50px !important;
   font-weight: 800 !important;
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 10px 20px rgba(255, 47, 146, 0.2);
 }
 
 .enroll-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 15px 30px rgba(255, 47, 146, 0.3);
 }
 
 .header-actions {

@@ -59,7 +59,7 @@
   background: var(--primary);
   color: white;
   border-color: var(--primary);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 8px 25px rgba(255, 47, 146, 0.2);
   font-weight: 800;
 }
 
@@ -118,7 +118,7 @@
   border-radius: 4px;
   font-size: 14px;
   font-weight: 800;
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 6px 20px rgba(255, 47, 146, 0.2);
 }
 
 .product-details {
@@ -205,7 +205,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.12), rgba(240, 147, 251, 0.08));
+  background: linear-gradient(135deg, rgba(255, 47, 146, 0.12), rgba(194, 24, 91, 0.08));
   border: 2px solid rgba(102, 126, 234, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;

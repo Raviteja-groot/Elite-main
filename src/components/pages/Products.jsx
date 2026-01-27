@@ -12,7 +12,7 @@ const Products = () => {
       name: 'Full Stack Web Development',
       price: 25000,
       category: 'development',
-      emoji: '💻',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
       duration: '12 weeks',
       level: 'Beginner - Advanced',
       rating: 4.9,
@@ -24,7 +24,7 @@ const Products = () => {
       name: 'Advanced Data Analytics',
       price: 20000,
       category: 'analytics',
-      emoji: '📊',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
       duration: '10 weeks',
       level: 'Intermediate',
       rating: 4.8,
@@ -36,7 +36,7 @@ const Products = () => {
       name: 'AI & Machine Learning',
       price: 30000,
       category: 'ai',
-      emoji: '🤖',
+      image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80',
       duration: '14 weeks',
       level: 'Advanced',
       rating: 5.0,
@@ -48,19 +48,19 @@ const Products = () => {
       name: 'Cloud Computing (AWS)',
       price: 22000,
       category: 'cloud',
-      emoji: '☁️',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
       duration: '8 weeks',
       level: 'Intermediate',
       rating: 4.7,
       students: '1.5k+',
-      desc: 'Architectscalable cloud solutions on the world\'s leading cloud platform.'
+      desc: 'Architect scalable cloud solutions on the world\'s leading cloud platform.'
     },
     {
       id: 5,
       name: 'Python for Beginners',
       price: 15000,
       category: 'development',
-      emoji: '🐍',
+      image: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=800&q=80',
       duration: '6 weeks',
       level: 'Beginner',
       rating: 4.9,
@@ -72,7 +72,7 @@ const Products = () => {
       name: 'DevOps & CI/CD',
       price: 24000,
       category: 'devops',
-      emoji: '⚙️',
+      image: 'https://images.unsplash.com/photo-1607799275518-d58665d096b1?auto=format&fit=crop&w=800&q=80',
       duration: '10 weeks',
       level: 'Intermediate',
       rating: 4.8,
@@ -84,7 +84,7 @@ const Products = () => {
       name: 'UI/UX Design Master',
       price: 18000,
       category: 'design',
-      emoji: '🎨',
+      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80',
       duration: '8 weeks',
       level: 'Beginner - Intermediate',
       rating: 4.9,
@@ -96,7 +96,7 @@ const Products = () => {
       name: 'Java Enterprise Development',
       price: 26000,
       category: 'development',
-      emoji: '☕',
+      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80',
       duration: '12 weeks',
       level: 'Intermediate - Advanced',
       rating: 4.7,
@@ -114,9 +114,9 @@ const Products = () => {
   return (
     <div className="courses-page bg-grid-light">
       {/* Hero Section */}
-      <section className="section-padding overflow-hidden relative">
+      <section className="section-padding overflow-hidden relative pb-10">
         <div className="container relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
+          <div className="text-center max-w-3xl mx-auto mb-10 animate-fade-up">
             <span className="badge-premium mb-6">Elite Academy</span>
             <h1 className="hero-main-title text-center block" style={{ alignItems: 'center' }}>
               Master the <span className="text-gradient">Future.</span>
@@ -126,7 +126,7 @@ const Products = () => {
             </p>
 
             {/* Search Bar */}
-            <div className="mt-12 relative max-w-xl mx-auto">
+            <div className="mt-10 relative max-w-xl mx-auto">
               <input
                 type="text"
                 placeholder="Search for courses (e.g. AI, Development...)"
@@ -152,18 +152,34 @@ const Products = () => {
       <section className="section-padding pt-0">
         <div className="container">
           {/* Filter Bar */}
-          <div className="flex flex-wrap justify-center gap-3 mb-16 animate-fade-up">
+          <div className="flex flex-wrap justify-center gap-6 mb-20 animate-fade-up">
             {['all', 'development', 'analytics', 'ai', 'cloud', 'design', 'devops'].map((cat) => (
               <button
                 key={cat}
-                className={`px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${filter === cat
-                    ? 'bg-gradient-to-r from-[#E91E63] to-[#6A1B9A] text-white shadow-lg shadow-[#E91E63]/20'
-                    : 'bg-white text-slate-600 border border-slate-100 hover:border-[#E91E63] hover:text-[#E91E63]'
+                className={`px-10 py-4 rounded-full text-base lg:text-lg font-black uppercase tracking-widest transition-all transform hover:-translate-y-1 ${filter === cat
+                    ? 'bg-gradient-to-r from-[#E91E63] to-[#6A1B9A] text-white shadow-xl shadow-[#E91E63]/30 scale-105'
+                    : 'bg-white text-slate-600 border-2 border-slate-100 hover:border-[#E91E63] hover:text-[#E91E63] hover:shadow-lg'
                   }`}
                 onClick={() => setFilter(cat)}
               >
                 {cat}
               </button>
+            ))}
+          </div>
+
+          {/* Stats Strip - Filling the Up Space */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-32 border-y border-slate-100 py-12 bg-white/50 backdrop-blur-sm">
+            {[
+              { label: 'Active Learners', value: '50,000+', icon: '👥' },
+              { label: 'Course Completion', value: '94%', icon: '📈' },
+              { label: 'Career Transition', value: '85%', icon: '🚀' },
+              { label: 'Avg Rating', value: '4.9/5', icon: '⭐' }
+            ].map((stat, i) => (
+              <div key={i} className="text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300 inline-block">{stat.icon}</div>
+                <div className="text-3xl lg:text-4xl font-black text-slate-800 mb-2">{stat.value}</div>
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">{stat.label}</div>
+              </div>
             ))}
           </div>
 
@@ -179,8 +195,13 @@ const Products = () => {
                   viewport={{ once: true }}
                   className="card-premium group p-0 overflow-hidden flex flex-col h-full hover:border-[#E91E63]/30"
                 >
-                  <div className="h-44 bg-slate-50 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-700">
-                    {course.emoji}
+                  <div className="h-48 relative overflow-hidden">
+                    <img 
+                      src={course.image} 
+                      alt={course.name} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-7 flex-1 flex flex-col">
                     <div className="flex justify-between items-center mb-4">
@@ -231,7 +252,7 @@ const Products = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding bg-slate-50/50">
+      <section className="pt-20 pb-0 bg-slate-50/50">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
@@ -257,15 +278,133 @@ const Products = () => {
                 ))}
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-[#E91E63]/5 to-[#6A1B9A]/5 border border-slate-200 flex items-center justify-center relative overflow-hidden">
-                <div className="text-[200px] opacity-20">🎓</div>
-                {/* Visual Decorative elements */}
-                <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-2xl shadow-2xl flex items-center justify-center text-2xl animate-bounce" style={{ animationDuration: '3s' }}>💻</div>
-                <div className="absolute bottom-20 right-10 w-24 h-24 bg-white rounded-3xl shadow-2xl flex items-center justify-center text-3xl animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>🚀</div>
-                <div className="absolute top-1/2 right-20 w-16 h-16 bg-white rounded-2xl shadow-2xl flex items-center justify-center text-xl animate-bounce" style={{ animationDuration: '5s', animationDelay: '2s' }}>🤖</div>
-              </div>
+            <div className="relative h-[500px] flex items-center justify-center">
+              {/* Background Glow */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-200/40 via-pink-200/40 to-amber-200/40 rounded-full blur-[100px] opacity-70" />
+              
+              {/* Main Dashboard Card */}
+              <motion.div 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="relative z-10 w-full max-w-lg bg-white rounded-2xl shadow-2xl shadow-slate-200/50 border border-slate-100 overflow-hidden"
+              >
+                {/* Header */}
+                <div className="bg-slate-900 px-4 py-3 flex items-center justify-between">
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                    <div className="w-3 h-3 rounded-full bg-amber-500" />
+                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                  </div>
+                  <div className="text-[10px] font-mono text-slate-400">student_success.jsx</div>
+                </div>
+                
+                {/* Content */}
+                <div className="p-6 space-y-6">
+                  <div className="flex items-center gap-4 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                    <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-lg">🚀</div>
+                    <div>
+                      <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Current Status</div>
+                      <div className="text-sm font-bold text-slate-800">Job Ready Developer</div>
+                    </div>
+                    <div className="ml-auto px-2 py-1 bg-green-100 text-green-700 text-[10px] font-bold uppercase rounded">Verified</div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Skills Mastered</div>
+                    <div className="flex flex-wrap gap-2">
+                      {['React', 'Node.js', 'Python', 'AWS', 'System Design'].map(skill => (
+                        <span key={skill} className="px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-600 shadow-sm">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Recent Offers</div>
+                    <div className="flex items-center gap-3">
+                      <div className="flex -space-x-3">
+                        <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-[10px] font-bold ring-2 ring-white">G</div>
+                        <div className="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-white text-[10px] font-bold ring-2 ring-white">A</div>
+                        <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-[10px] font-bold ring-2 ring-white">M</div>
+                      </div>
+                      <span className="text-xs font-medium text-slate-500">+ 12 Interview Calls</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Floating Element 1 */}
+              <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+                className="absolute -right-4 top-20 bg-white p-4 rounded-xl shadow-xl border border-slate-100 z-20 max-w-[180px]"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">💰</div>
+                  <div>
+                    <div className="text-[10px] text-slate-400 font-bold uppercase">Avg Hike</div>
+                    <div className="text-sm font-black text-slate-800">150%</div>
+                  </div>
+                </div>
+                <div className="h-1 w-full bg-slate-100 rounded-full overflow-hidden">
+                  <div className="h-full w-[80%] bg-green-500 rounded-full" />
+                </div>
+              </motion.div>
+
+              {/* Floating Element 2 */}
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 }}
+                className="absolute -left-4 bottom-32 bg-white p-4 rounded-xl shadow-xl border border-slate-100 z-20"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-xl">🏆</div>
+                  <div>
+                    <div className="text-[10px] text-slate-400 font-bold uppercase">Certificate</div>
+                    <div className="text-sm font-black text-slate-800">Industry Recognized</div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Path Section - Filling the Down Space */}
+      <section className="pt-10 pb-20 bg-white border-y border-slate-100">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="badge-premium mb-4">How It Works</span>
+            <h2 className="text-3xl lg:text-4xl font-black text-slate-800 uppercase leading-tight">
+              Your Journey to <span className="text-gradient">Mastery.</span>
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8 relative">
+            {/* Connecting Line (Hidden on mobile) */}
+            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-slate-200 via-purple-200 to-slate-200" />
+            
+            {[
+              { step: '01', title: 'Choose Path', desc: 'Select from our industry-aligned tech stacks.', icon: '🎯' },
+              { step: '02', title: 'Build Projects', desc: 'Work on real-world enterprise applications.', icon: '💻' },
+              { step: '03', title: 'Get Mentored', desc: 'Weekly 1:1 sessions with experts.', icon: '👨‍🏫' },
+              { step: '04', title: 'Get Hired', desc: 'Resume reviews and interview referrals.', icon: '🚀' }
+            ].map((item, i) => (
+              <div key={i} className="relative pt-8 text-center group">
+                <div className="w-16 h-16 mx-auto bg-white rounded-2xl shadow-xl border border-slate-100 flex items-center justify-center text-2xl mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                  {item.icon}
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold border-4 border-white">
+                    {item.step}
+                  </div>
+                </div>
+                <h3 className="text-xl font-black text-slate-800 mb-3 uppercase">{item.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

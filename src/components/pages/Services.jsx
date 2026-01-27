@@ -66,6 +66,32 @@ function Services() {
                     </div>
                 </div>
             </section>
+
+            {/* Process Section */}
+            <section className="section-padding bg-surface/30">
+                <div className="container">
+                    <div className="text-center mb-20">
+                        <h2 className="section-heading">How We Work</h2>
+                        <div className="heading-sub">Systematic excellence.</div>
+                    </div>
+                    <div className="grid md:grid-cols-4 gap-8">
+                        {[
+                            { step: '01', title: 'Discovery', desc: 'Deep dive into your infrastructure and business goals.' },
+                            { step: '02', title: 'Strategy', desc: 'Designing a roadmap tailored to your specific constraints.' },
+                            { step: '03', title: 'Execution', desc: 'Agile implementation with continuous feedback loops.' },
+                            { step: '04', title: 'Optimization', desc: 'Data-driven refinement to maximize ROI.' }
+                        ].map((p, i) => (
+                            <div key={i} className="relative">
+                                <div className="text-8xl font-black text-slate-100 absolute -top-10 -left-4 z-0">{p.step}</div>
+                                <div className="relative z-10 card-premium border-l-4 border-l-blue-500">
+                                    <h3 className="text-xl font-bold mb-4">{p.title}</h3>
+                                    <p className="text-muted text-sm">{p.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }

@@ -42,7 +42,7 @@ function Footer() {
               <motion.img 
                 src={logo} 
                 alt="ELITE AI SOLUTIONS" 
-                className="footer-logo-img h-20 w-auto drop-shadow-md" 
+                className="footer-logo-img h-48 w-auto drop-shadow-md" 
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
@@ -127,7 +127,7 @@ function Footer() {
             <h4 className="footer-title text-sm font-bold uppercase tracking-widest text-slate-900 mb-8">Industries</h4>
             <div className="links-columns grid grid-cols-2 gap-x-8 gap-y-2">
               <ul className="space-y-3">
-                {['Banking & Finance', 'Media', 'Energy', 'Retail', 'Logistics', 'Automotive', 'Government'].map((item) => (
+                {['Banking & Finance', 'Media', 'Energy', 'Retail', 'Logistics'].map((item) => (
                   <li key={item}>
                     <Link to={`/industries/${item.toLowerCase().replace(/ /g, '-')}`} className="text-slate-500 hover:text-purple-700 transition-colors hover:pl-2 block text-sm font-medium">
                       {item}
@@ -136,7 +136,7 @@ function Footer() {
                 ))}
               </ul>
               <ul className="space-y-3">
-                {['Healthcare', 'Telecom', 'Oil & Gas', 'Manufacturing', 'Travel', 'Education', 'Insurance'].map((item) => (
+                {['Automotive', 'Government', 'Healthcare', 'Telecom'].map((item) => (
                   <li key={item}>
                     <Link to={`/industries/${item.toLowerCase().replace(/ /g, '-')}`} className="text-slate-500 hover:text-purple-700 transition-colors hover:pl-2 block text-sm font-medium">
                       {item}

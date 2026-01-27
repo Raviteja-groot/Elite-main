@@ -71,6 +71,38 @@ function About() {
           </div>
         </div>
       </section>
+
+      {/* Leadership Section */}
+      <section className="section-padding bg-surface/30">
+        <div className="container">
+          <div className="text-center mb-20 animate-fade-up">
+            <h2 className="section-heading">Our Leadership</h2>
+            <div className="heading-sub">Visionaries behind the mission.</div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-10">
+            {[
+              { name: 'Dr. Sarah Chen', role: 'Chief Strategy Officer', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400', desc: 'Ex-McKinsey Partner with 15 years in digital transformation.' },
+              { name: 'Michael Ross', role: 'Chief Technology Officer', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400', desc: 'Former Engineering VP at Google Cloud.' },
+              { name: 'Elena Rodriguez', role: 'Head of Operations', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400&h=400', desc: 'Operational excellence expert with a focus on scaling agile teams.' }
+            ].map((leader, i) => (
+              <div key={i} className="card-premium p-0 overflow-hidden group">
+                <div className="aspect-square relative overflow-hidden">
+                  <img src={leader.img} alt={leader.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                    <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <p className="font-bold text-lg">{leader.desc}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-8 text-center bg-surface">
+                  <h3 className="text-2xl font-bold mb-2">{leader.name}</h3>
+                  <p className="text-blue-500 font-bold text-xs uppercase tracking-widest">{leader.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

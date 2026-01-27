@@ -35,36 +35,41 @@ function ITSolutions() {
                     </div>
 
                     {/* New Tech Stack Section */}
-                    <div className="mb-24">
+                    <div className="mb-24 relative z-10">
                         <div className="text-center mb-16 animate-fade-up">
-                            <h2 className="section-heading">Our Tech Stack</h2>
-                            <div className="heading-sub">We only use battle-tested, enterprise-grade technologies.</div>
+                            <h2 className="text-4xl lg:text-5xl font-black text-slate-800 mb-6 uppercase">Our Tech Stack</h2>
+                            <div className="text-slate-500 max-w-2xl mx-auto">We only use battle-tested, enterprise-grade technologies.</div>
                         </div>
-                        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 opacity-70">
+                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                             {['AWS', 'Azure', 'Google Cloud', 'React', 'Node.js', 'Python', 'Kubernetes', 'Docker', 'TensorFlow', 'PostgreSQL', 'Redis', 'GraphQL'].map((tech, i) => (
-                                <div key={i} className="flex items-center justify-center p-4 border border-slate-100 rounded-lg font-bold text-slate-500 uppercase tracking-widest text-xs hover:border-purple-500 hover:text-purple-600 transition-colors cursor-default">
-                                    {tech}
+                                <div key={i} className="group relative bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center hover:-translate-y-1 hover:shadow-xl hover:border-purple-200 transition-all duration-300">
+                                    <span className="font-bold text-slate-600 uppercase tracking-widest text-xs group-hover:text-purple-600 transition-colors">
+                                        {tech}
+                                    </span>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    <div className="stats-bar bg-gradient-to-r from-purple-900 to-slate-900 text-white rounded-[40px] shadow-2xl shadow-purple-900/30 overflow-hidden relative">
-                        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                        <div className="container relative z-10">
-                            <div className="stats-grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-                                {[
-                                    { l: 'Uptime SLA', v: '99.99%' },
-                                    { l: 'Projects Delivered', v: '500+' },
-                                    { l: 'Expert Support', v: '24/7' },
-                                    { l: 'Security Index', v: 'A+' }
-                                ].map((st, idx) => (
-                                    <div key={idx} className="text-center p-12">
-                                        <p className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 mb-4 font-outfit">{st.v}</p>
-                                        <p className="text-[10px] font-bold text-purple-300 uppercase tracking-widest">{st.l}</p>
-                                    </div>
-                                ))}
-                            </div>
+                    <div className="relative -mt-12 mx-4 lg:mx-20 bg-white rounded-[40px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 p-12 overflow-hidden z-20">
+                        {/* Decorative Background */}
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-50 rounded-full blur-[80px] opacity-60 -translate-y-1/2 translate-x-1/2" />
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-50 rounded-full blur-[80px] opacity-60 translate-y-1/2 -translate-x-1/2" />
+                        
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
+                            {[
+                                { l: 'Uptime SLA', v: '99.99%' },
+                                { l: 'Projects Delivered', v: '500+' },
+                                { l: 'Expert Support', v: '24/7' },
+                                { l: 'Security Index', v: 'A+' }
+                            ].map((st, idx) => (
+                                <div key={idx} className="text-center group">
+                                    <p className="text-5xl lg:text-6xl font-black text-slate-800 mb-4 tracking-tight group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-slate-800 to-slate-600 bg-clip-text text-transparent">
+                                        {st.v}
+                                    </p>
+                                    <p className="text-xs font-bold text-purple-600 uppercase tracking-[0.2em]">{st.l}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
